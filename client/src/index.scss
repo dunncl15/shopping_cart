@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    color: #333;
+    margin: 25px auto 0;
+    width: 95%;
+  }
+
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: #333;
+
+    button {
+      position: relative;
+      height: 100%;
+      width: 65px;
+      background-color: #333;
+      border: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.25em;
+
+      span {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: red;
+        color: #fff;
+        font-size: 0.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    main {
+      justify-content: center;
+    }
+  }
+}
