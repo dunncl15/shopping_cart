@@ -25,6 +25,7 @@ const Product = sql.define(
     title: Sequelize.STRING,
     description: Sequelize.STRING,
     cost: Sequelize.NUMERIC,
+    rating: Sequelize.NUMERIC,
   },
   schemaSettings
 );
@@ -56,13 +57,12 @@ exports.init = () =>
             description: title,
             thumbnail_url: thumbnailUrl,
             cost: parseFloat((Math.random() * 250).toFixed()),
+            rating: Math.floor(Math.random() * 6),
           }))
           .slice(0, 100);
         Product.bulkCreate(data);
       })
-      .catch(err => {
-        return err;
-      });
+      .catch(err => err);
   });
 
 exports.Product = Product;
