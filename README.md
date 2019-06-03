@@ -9,3 +9,5 @@
 • `cd api && npm start` - Server should then be running on port 4000.
 
 • In a separate terminal window: `cd client && npm start` - Application should open at localhost:8080
+
+Note: Restarting the server will clear saved data.
